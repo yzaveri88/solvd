@@ -9,5 +9,6 @@ class QuestionsController < ApplicationController
 
 
   def result
+
   end
 end

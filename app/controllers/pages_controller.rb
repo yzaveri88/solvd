@@ -29,6 +29,7 @@ class PagesController < ApplicationController
 
 
   def continue
+    # navigation bar - go back to quizzes
      @user = current_user
   end
 
