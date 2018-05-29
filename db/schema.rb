@@ -10,10 +10,69 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_28_131222) do
+ActiveRecord::Schema.define(version: 2018_05_29_102330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.text "content"
+    t.bigint "question_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.decimal "price"
+    t.boolean "workout"
+    t.boolean "wireless"
+    t.integer "age"
+    t.bigint "sub_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sub_category_id"], name: "index_products_on_sub_category_id"
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.text "content"
+    t.bigint "quiz_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "answer_id"
+    t.index ["answer_id"], name: "index_questions_on_answer_id"
+    t.index ["quiz_id"], name: "index_questions_on_quiz_id"
+  end
+
+  create_table "quizzes", force: :cascade do |t|
+    t.bigint "sub_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["sub_category_id"], name: "index_quizzes_on_sub_category_id"
+  end
+
+  create_table "sub_categories", force: :cascade do |t|
+    t.string "name"
+    t.bigint "category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_sub_categories_on_category_id"
+  end
+
+  create_table "user_answers", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "answer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["answer_id"], name: "index_user_answers_on_answer_id"
+    t.index ["user_id"], name: "index_user_answers_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -32,4 +91,11 @@ ActiveRecord::Schema.define(version: 2018_05_28_131222) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "products", "sub_categories"
+  add_foreign_key "questions", "quizzes"
+  add_foreign_key "quizzes", "sub_categories"
+  add_foreign_key "sub_categories", "categories"
+  add_foreign_key "user_answers", "answers"
+  add_foreign_key "user_answers", "users"
 end
