@@ -13,8 +13,19 @@
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= yield %>
+    
+     <div class="footer">
+    <!-- you still have to include the links to the icons -->
+      <div class="footer-links">
+        <a href="#"><i class="far fa-compass"></i></a>
+        <a href="#"><i class="fas fa-heart"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'carousel' %>
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>
+
+
