@@ -5,7 +5,20 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
 
+  def search
+    if params[:query].present?
+      @sub_category = Sub_category.where(name: params[:query])
+    else
+      @sub_category = Sub_category.all
+    end
+  end
+
+
   def show
     @category = Category.find(params[:id])
   end
 end
+
+
+
+
