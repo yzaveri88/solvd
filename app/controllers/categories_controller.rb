@@ -3,8 +3,8 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
-  end
 
+  end
   def search
     if params[:query].present?
       @sub_category = Sub_category.where(name: params[:query])
