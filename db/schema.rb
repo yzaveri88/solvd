@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 2018_05_29_132507) do
     t.decimal "price"
     t.boolean "workout"
     t.boolean "wireless"
-    t.integer "age"
     t.bigint "sub_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
