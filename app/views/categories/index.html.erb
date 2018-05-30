@@ -4,7 +4,7 @@
   <div class="searchterm">
     <div class="search-block">
     <i class="fas fa-search"> </i>
-    <%= form_tag  categories_show_path, method: :get do %>
+    <%= form_tag  questions_show_path, method: :get do %>
     <%= text_field_tag :query, params[:query], placeholder: "Search for products", class: "header-form" %>
     <% end %>
     </div>
