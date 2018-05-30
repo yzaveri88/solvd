@@ -12,7 +12,7 @@ Category.create(name: 'Toys')
 Category.create(name: 'Books & Films')
 Category.create(name: 'Sevices')
 
-SubCategory.create(name: 'Headphones')
+headphones = SubCategory.create(name: 'Headphones')
 SubCategory.create(name: 'Laptops')
 SubCategory.create(name: 'Cameras')
 SubCategory.create(name: 'TVs')
@@ -20,6 +20,3 @@ SubCategory.create(name: 'Speakers')
 SubCategory.create(name: 'Mobile Phone')
 SubCategory.create(name: 'Tablets')
 SubCategory.create(name: 'Tent')
-
-
-Product.create(price: , wireless: , workout:, age: )

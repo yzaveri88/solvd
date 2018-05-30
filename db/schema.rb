@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_29_132507) do
+ActiveRecord::Schema.define(version: 2018_05_29_143712) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,10 +33,15 @@ ActiveRecord::Schema.define(version: 2018_05_29_132507) do
     t.decimal "price"
     t.boolean "workout"
     t.boolean "wireless"
+    t.integer "age"
     t.bigint "sub_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "kids"
+    t.string "name"
+    t.integer "stars"
+    t.boolean "noiseisolation"
+    t.boolean "noisecancellation"
     t.index ["sub_category_id"], name: "index_products_on_sub_category_id"
   end
 
