@@ -33,14 +33,14 @@
 
 <div class="container">
   <div class="row">
-    <% @categories.each do |category| %>
+    <% @sub_categories.each do |sub_category| %>
       <div class="col-xs-6 col-sm-3">
         <div class="card-sub-category">
           <div class="card-sub-category-image">
-          <%= cl_image_tag category.photo, height: 150, width:150, crop: :fill %>
+          <%= cl_image_tag sub_category.photo, height: 150, width:150, crop: :fill %>
           </div>
           <div class="card-sub-category-title">
-            <%= category.name %>
+            <%= sub_category.name %>
           </div>
         </div>
       </div>
