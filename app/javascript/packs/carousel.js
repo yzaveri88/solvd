@@ -6,6 +6,7 @@ let flkty = new Flickity( elem, {
   imagesLoaded: true,
   cellAlign: 'center',
   contain: true,
+  pageDots: false,
   resize: false,
   setGallerySize: false
 });
