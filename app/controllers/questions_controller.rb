@@ -8,7 +8,7 @@ class QuestionsController < ApplicationController
 
 
     # Default is quiz 1, to be removed
-    @quiz ||= Quiz.first
+    # @quiz ||= Quiz.first
 
 
     @quiz_session = QuizSession.create(quiz: @quiz, user: current_user)
@@ -23,6 +23,10 @@ class QuestionsController < ApplicationController
     base = @quiz.questions.count || 5
     num_answers = current_user.user_answers.where(quiz_session: @quiz_session).count + 1
     @progress = num_answers.fdiv(base)
+
+
+    @question =Question.find(params[:id])
+    @sub_categories = SubCategory.where(params[:category_id])
 
     # @sub_category = SubCategory.find(params[:id])
     # @question = Question.find(params[:id])
