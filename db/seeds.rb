@@ -1,3 +1,4 @@
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -41,10 +42,10 @@ category_5 = Category.new(name: 'Books & Films')
 category_5.remote_photo_url = url_5
 category_5.save
 
-url_5 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/services.jpg"
-category_5 = Category.new(name: 'Services')
-category_5.remote_photo_url = url_5
-category_5.save
+url_6 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/services.jpg"
+category_6 = Category.new(name: 'Services')
+category_6.remote_photo_url = url_6
+category_6.save
 
 # SubCategory.create(name: 'Tent',category_id:category_3.id)
 
@@ -90,8 +91,6 @@ sub_category_8.save!
 
 
 
-
-
 # # Tree logic
 # q1 = Question.create(content: "What style of headphone do you prefer?")
 
@@ -104,6 +103,7 @@ sub_category_8.save!
 # a3 = Answer.create(content: 'Yes', question: q2)
 # a4 = Answer.create(content: 'No', question: q2)
 # a5 = Answer.create(content: 'Yes', question: q3)
+
 # a6 = Answer.create(content: 'No', question: q3)#
 
 # q4 = Question.create(content: 'Where will you primarily be using your headphones?', parent_answer: a3)
