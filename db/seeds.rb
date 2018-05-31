@@ -1,59 +1,95 @@
-# # This file should contain all the record creation needed to seed the database with its default values.
-# # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-# #
-# # Examples:
-# #
-# #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-# #   Character.create(name: 'Luke', movie: movies.first)
 
-# # Category.create(name: 'Electronics', photo: 'electronics.jpg')
-# # Category.create(name: 'Home & Furniture', photo: 'home_furniture.jpg')
-# # Category.create(name: 'Outdoors', photo: 'Outdoors.png')
-# # Category.create(name: 'Toys', photo: 'toys.jpg')
-# # Category.create(name: 'Books & Films', photo: 'books.png')
-# # Category.create(name: 'Services', photo: 'services.jpg')
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
 
-# Category.destroy_all
-# SubCategory.destroy_all
+# Category.create(name: 'Electronics', photo: 'electronics.jpg')
+# Category.create(name: 'Home & Furniture', photo: 'home_furniture.jpg')
+# Category.create(name: 'Outdoors', photo: 'Outdoors.png')
+# Category.create(name: 'Toys', photo: 'toys.jpg')
+# Category.create(name: 'Books & Films', photo: 'books.png')
+# Category.create(name: 'Services', photo: 'services.jpg')
 
-# url = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/electronics.jpg"
-# category = Category.new(name: 'Electronics')
-# category.remote_photo_url = url
-# category.save
+SubCategory.destroy_all
+Category.destroy_all
 
-# url_2 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/home_furniture.jpg"
-# category_2 = Category.new(name: 'Home & Furniture')
-# category_2.remote_photo_url = url_2
-# category_2.save
+url = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/electronics.jpg"
+category = Category.new(name: 'Electronics')
+category.remote_photo_url = url
+category.save
 
-# url_3 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/Outdoors.png"
-# category_3 = Category.new(name: 'Outdoors')
-# category_3.remote_photo_url = url_3
-# category_3.save
+url_2 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/home_furniture.jpg"
+category_2 = Category.new(name: 'Home & Furniture')
+category_2.remote_photo_url = url_2
+category_2.save
 
-# url_4 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/toys.jpg"
-# category_4 = Category.new(name: 'Toys')
-# category_4.remote_photo_url = url_4
-# category_4.save
+url_3 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/Outdoors.png"
+category_3 = Category.new(name: 'Outdoors')
+category_3.remote_photo_url = url_3
+category_3.save
 
-# url_5 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/books.png"
-# category_5 = Category.new(name: 'Books & Films')
-# category_5.remote_photo_url = url_5
-# category_5.save
+url_4 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/toys.jpg"
+category_4 = Category.new(name: 'Toys')
+category_4.remote_photo_url = url_4
+category_4.save
 
-# url_5 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/services.jpg"
-# category_5 = Category.new(name: 'Services')
-# category_5.remote_photo_url = url_5
-# category_5.save
+url_5 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/books.png"
+category_5 = Category.new(name: 'Books & Films')
+category_5.remote_photo_url = url_5
+category_5.save
 
-# SubCategory.create(name: 'Headphones', category_id: category.id)
-# SubCategory.create(name: 'Laptops', category_id: category.id)
-# SubCategory.create(name: 'Cameras', category_id: category.id)
-# SubCategory.create(name: 'TVs', category_id: category.id)
-# SubCategory.create(name: 'Speakers',category_id: category.id)
-# SubCategory.create(name: 'Mobile Phone',category_id: category.id)
-# SubCategory.create(name: 'Tablets',category_id: category.id)
+url_6 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/services.jpg"
+category_6 = Category.new(name: 'Services')
+category_6.remote_photo_url = url_6
+category_6.save
+
 # SubCategory.create(name: 'Tent',category_id:category_3.id)
+
+sub_category_url_1 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/headphones.jpg"
+sub_category_1 = SubCategory.create(name: 'Headphones', category_id: category.id)
+sub_category_1.remote_photo_url = sub_category_url_1
+sub_category_1.save!
+
+sub_category_url_2 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/laptop.jpg"
+sub_category_2 = SubCategory.create(name: 'Laptops', category_id: category.id)
+sub_category_2.remote_photo_url = sub_category_url_2
+sub_category_2.save!
+
+sub_category_url_3 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/cameras.jpg"
+sub_category_3 = SubCategory.create(name: 'Cameras', category_id: category.id)
+sub_category_3.remote_photo_url = sub_category_url_3
+sub_category_3.save!
+
+sub_category_url_4 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/tvs.jpg"
+sub_category_4 = SubCategory.create(name: 'TVs', category_id: category.id)
+sub_category_4.remote_photo_url = sub_category_url_4
+sub_category_4.save!
+
+sub_category_url_5 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/speakers.jpg"
+sub_category_5 = SubCategory.create(name: 'Speakers', category_id: category.id)
+sub_category_5.remote_photo_url = sub_category_url_5
+sub_category_5.save!
+
+sub_category_url_6 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/mobilephones.jpg"
+sub_category_6 = SubCategory.create(name: 'Mobile Phones', category_id: category.id)
+sub_category_6.remote_photo_url = sub_category_url_6
+sub_category_6.save!
+
+sub_category_url_7 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/tablets.jpg"
+sub_category_7 = SubCategory.create(name: 'Tablets', category_id: category.id)
+sub_category_7.remote_photo_url = sub_category_url_7
+sub_category_7.save!
+
+sub_category_url_8 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/gaming.jpg"
+sub_category_8 = SubCategory.create(name: 'Gaming', category_id: category.id)
+sub_category_8.remote_photo_url = sub_category_url_8
+sub_category_8.save!
+
+
 
 # # Tree logic
 # q1 = Question.create(content: "What style of headphone do you prefer?")
@@ -67,7 +103,8 @@
 # a3 = Answer.create(content: 'Yes', question: q2)
 # a4 = Answer.create(content: 'No', question: q2)
 # a5 = Answer.create(content: 'Yes', question: q3)
-# a6 = Answer.create(content: 'No', question: q3)
+
+# a6 = Answer.create(content: 'No', question: q3)#
 
 # q4 = Question.create(content: 'Where will you primarily be using your headphones?', parent_answer: a3)
 # q5 = Question.create(content: 'Where will you primarily be using your headphones?', parent_answer: a4)

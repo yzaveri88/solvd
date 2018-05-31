@@ -1,3 +1,17 @@
-<h1>Categories#show</h1>
-<p>Find me in app/views/categories/show.html.erb</p>
-<%= cl_image_tag("toys.jpg") %>
+<div class="container">
+  <h4>Recommended <%= @category.name %></h4>
+  <div class="row">
+    <% @sub_categories.each do |sub_category| %>
+      <div class="col-xs-6 col-sm-3">
+        <div class="card-sub-category">
+          <div class="card-sub-category-image">
+          <%= cl_image_tag sub_category.photo, height: 150, width:150, crop: :fill %>
+          </div>
+          <div class="card-sub-category-title">
+            <%= sub_category.name %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
