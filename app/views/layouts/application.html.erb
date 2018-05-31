@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="<%= params[:controller]%> <%= params[:action] %>">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,15 +13,16 @@
     <%#= render 'shared/navbar' %>
     <%#= render 'shared/flashes' %>
     <%= yield %>
-
-     <div class="footer">
-    <!-- you still have to include the links to the icons -->
-      <div class="footer-links">
-        <a href="#"><i class="far fa-compass"></i></a>
-        <a href="#"><i class="fas fa-heart"></i></a>
-        <a href="#"><i class="fas fa-user"></i></a>
+    <% unless @hide_footer %>
+      <div class="footer">
+        <!-- you still have to include the links to the icons -->
+        <div class="footer-links">
+          <a href="#"><i class="far fa-compass"></i></a>
+          <a href="#"><i class="fas fa-heart"></i></a>
+          <a href="#"><i class="fas fa-user"></i></a>
+        </div>
       </div>
-    </div>
+    <% end %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'carousel' %>
     <%= javascript_pack_tag 'application' %>
