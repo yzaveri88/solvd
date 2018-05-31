@@ -46,14 +46,51 @@ category_5 = Category.new(name: 'Services')
 category_5.remote_photo_url = url_5
 category_5.save
 
-SubCategory.create(name: 'Headphones', category_id: category.id)
-SubCategory.create(name: 'Laptops', category_id: category.id)
-SubCategory.create(name: 'Cameras', category_id: category.id)
-SubCategory.create(name: 'TVs', category_id: category.id)
-SubCategory.create(name: 'Speakers',category_id: category.id)
-SubCategory.create(name: 'Mobile Phone',category_id: category.id)
-SubCategory.create(name: 'Tablets',category_id: category.id)
-SubCategory.create(name: 'Tent',category_id:category_3.id)
+# SubCategory.create(name: 'Tent',category_id:category_3.id)
+
+sub_category_url_1 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/headphones.jpg"
+sub_category_1 = SubCategory.create(name: 'Headphones', category_id: category.id)
+sub_category_1.remote_photo_url = sub_category_url_1
+sub_category_1.save!
+
+sub_category_url_2 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/laptop.jpg"
+sub_category_2 = SubCategory.create(name: 'Laptops', category_id: category.id)
+sub_category_2.remote_photo_url = sub_category_url_2
+sub_category_2.save!
+
+sub_category_url_3 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/cameras.jpg"
+sub_category_3 = SubCategory.create(name: 'Cameras', category_id: category.id)
+sub_category_3.remote_photo_url = sub_category_url_3
+sub_category_3.save!
+
+sub_category_url_4 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/tvs.jpg"
+sub_category_4 = SubCategory.create(name: 'TVs', category_id: category.id)
+sub_category_4.remote_photo_url = sub_category_url_4
+sub_category_4.save!
+
+sub_category_url_5 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/speakers.jpg"
+sub_category_5 = SubCategory.create(name: 'Speakers', category_id: category.id)
+sub_category_5.remote_photo_url = sub_category_url_5
+sub_category_5.save!
+
+sub_category_url_6 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/mobilephones.jpg"
+sub_category_6 = SubCategory.create(name: 'Mobile Phones', category_id: category.id)
+sub_category_6.remote_photo_url = sub_category_url_6
+sub_category_6.save!
+
+sub_category_url_7 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/tablets.jpg"
+sub_category_7 = SubCategory.create(name: 'Tablets', category_id: category.id)
+sub_category_7.remote_photo_url = sub_category_url_7
+sub_category_7.save!
+
+sub_category_url_8 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1527755777/gaming.jpg"
+sub_category_8 = SubCategory.create(name: 'Gaming', category_id: category.id)
+sub_category_8.remote_photo_url = sub_category_url_8
+sub_category_8.save!
+
+
+
+
 
 # # Tree logic
 # q1 = Question.create(content: "What style of headphone do you prefer?")
