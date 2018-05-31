@@ -18,7 +18,9 @@
  <div class="carousel-item">
   <div class="card">
     <div class="card__image">
+      <%= link_to category_path(category) do %>
       <%= cl_image_tag category.photo, height: 250, width:250, crop: :fill %>
+      <% end %>
     </div>
     <div class="card__info">
       <h2 class="card__title"><%= category.name %></h2>
@@ -29,7 +31,24 @@
 </div>
 <h4>Recommended Electronics</h4>
 
-<%#= cl_image_tag("guhfrdwlw7vscqgjjw3w.jpg") %>
+<div class="container">
+  <div class="row">
+    <% @categories.each do |category| %>
+      <div class="col-xs-6 col-sm-3">
+        <div class="card-sub-category">
+          <div class="card-sub-category-image">
+          <%= cl_image_tag category.photo, height: 150, width:150, crop: :fill %>
+          </div>
+          <div class="card-sub-category-title">
+            <%= category.name %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </div>
+</div>
+
+
 
 
 

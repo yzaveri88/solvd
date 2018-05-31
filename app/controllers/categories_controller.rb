@@ -3,8 +3,8 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
-
   end
+
   def search
     if params[:query].present?
       @sub_category = Sub_category.where(name: params[:query])
@@ -13,12 +13,12 @@ class CategoriesController < ApplicationController
     end
   end
 
-
   def show
     @category = Category.find(params[:id])
+    @sub_categories = SubCategory.where(params[:category_id])
+    #@sub_category = SubCategory.find(params[:id])
   end
 end
-
 
 
 
