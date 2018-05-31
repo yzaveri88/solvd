@@ -11,24 +11,6 @@
   </div>
 </div>
 
-<!-- Orignal Working Carousel Code without images
-<h4>Explore Categories</h4>
-<div class="carousel">
- <%# @categories.each do |category| %>
- <div class="carousel-item">
-  <div class="card">
-    <div class="card__image">
-      <img src="http://unsplash.it/300/?image=58" alt=""/>
-    </div>
-    <div class="card__info">
-      <h2 class="card__title"><%#= category.name %></h2>
-    </div>
-  </div>
-</div>
-<%# end %>
-</div>
-<h4>Recommended Electronics</h4>
--->
 
 <h4>Explore Categories</h4>
 <div class="carousel">
@@ -36,8 +18,8 @@
  <div class="carousel-item">
   <div class="card">
     <div class="card__image">
-      <img src="http://unsplash.it/300/?image=58" alt=""/>
-      <!--<img src="<%#= cl_image_path category.photo, height: 300, width: 400, crop: :fill %>" alt="<%# category.name %>"/>-->
+      <%= cl_image_tag category.photo, height: 250, width:250, crop: :fill %>
+    </div>
     <div class="card__info">
       <h2 class="card__title"><%= category.name %></h2>
     </div>
@@ -47,6 +29,7 @@
 </div>
 <h4>Recommended Electronics</h4>
 
+<%#= cl_image_tag("guhfrdwlw7vscqgjjw3w.jpg") %>
 
 
 
