@@ -36,7 +36,8 @@
  <div class="carousel-item">
   <div class="card">
     <div class="card__image">
-      <img src="<%= cl_image_path category.photo %>" alt="<% category.name %>"/>
+      <img src="http://unsplash.it/300/?image=58" alt=""/>
+      <!--<img src="<%#= cl_image_path category.photo, height: 300, width: 400, crop: :fill %>" alt="<%# category.name %>"/>-->
     <div class="card__info">
       <h2 class="card__title"><%= category.name %></h2>
     </div>
@@ -45,10 +46,6 @@
 <% end %>
 </div>
 <h4>Recommended Electronics</h4>
-
-
-
-
 
 
 

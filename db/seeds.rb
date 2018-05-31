@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Category.create(name: 'Electronics')
-Category.create(name: 'Home & Furniture')
-Category.create(name: 'Outdoors')
-Category.create(name: 'Toys')
-Category.create(name: 'Books & Films')
-Category.create(name: 'Services')
+Category.create(name: 'Electronics', photo: 'electronics.jpg')
+Category.create(name: 'Home & Furniture', photo: 'home_furniture.jpg')
+Category.create(name: 'Outdoors', photo: 'Outdoors.png')
+Category.create(name: 'Toys', photo: 'toys.jpg')
+Category.create(name: 'Books & Films', photo: 'books.png')
+Category.create(name: 'Services', photo: 'services.jpg')
 
 SubCategory.create(name: 'Headphones', category_id:1)
 SubCategory.create(name: 'Laptops', category_id:1)
