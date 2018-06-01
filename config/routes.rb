@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   end
   resources :quiz_sessions, except: :create do
     get 'last_question', to: 'last_questions#show'
+    resources :user_answers, only: :create
     resources :questions, only: [:show] do
-      resources :user_answers, only: :create
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

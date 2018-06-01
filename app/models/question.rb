@@ -4,8 +4,8 @@ class Question < ApplicationRecord
   has_many :answers, dependent: :destroy
 
   def answered?(session)
-    session.answers.any? do |answer|
-      answers.include?(answer)
+    session.user_answers.any? do |user_answer|
+      answers.include?(user_answer.answer)
     end
   end
 end
