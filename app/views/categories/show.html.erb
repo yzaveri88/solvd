@@ -5,7 +5,9 @@
       <div class="col-xs-6 col-sm-3">
         <div class="card-sub-category">
           <div class="card-sub-category-image">
-          <%= cl_image_tag sub_category.photo, height: 150, width:150, crop: :fill %>
+            <%= link_to quiz_quiz_sessions_path(sub_category.quiz), method: :post do %>
+              <%= cl_image_tag sub_category.photo, height: 150, width:150, crop: :fill %>
+            <% end %>
           </div>
           <div class="card-sub-category-title">
             <%= sub_category.name %>

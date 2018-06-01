@@ -18,6 +18,8 @@ class QuestionsController < ApplicationController
   end
 
   def show
+
+    # progress bar
     @quiz = Quiz.find(params[:quiz_id])
     @quiz_session = QuizSession.find(params[:quiz_session_id])
     base = @quiz.questions.count || 5
@@ -25,8 +27,15 @@ class QuestionsController < ApplicationController
     @progress = num_answers.fdiv(base)
 
 
-    @question =Question.find(params[:id])
-    @sub_categories = SubCategory.where(params[:category_id])
+    #questions for each page
+    @quiz_show = Quiz.find(params[:id])
+    @questions = Question.where(params[:quiz_id])
+
+    @question = Question.find(params[:id])
+    @answers = Answer.where(params[:question_id])
+
+    # @category = Category.find(params[:id])
+    # @sub_categories = SubCategory.where(params[:category_id])
 
     # @sub_category = SubCategory.find(params[:id])
     # @question = Question.find(params[:id])
