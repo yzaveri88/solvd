@@ -1,13 +1,11 @@
-This is the last question
-<%= @question.id %>
-<%= @question.quiz.questions.count %>
 
-
+<div class="container">
+  <h3>Electronics > Headphones</h3>
 <%= simple_form_for [@quiz_session, @user_answer] do |f| %>
-  <%= f.association :answer, collection: @question.answers, label_method: :content, value_method: :id, label: @question.content %>
-  <%= f.submit %>
+  <%= f.association :answer, collection: @question.answers, label_method: :content, value_method: :id, label: @question.content, as: :radio_buttons %>
+  <%= f.submit 'Submit' %>
 <% end %>
-
+</div>
 
 
 

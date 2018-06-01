@@ -9,7 +9,7 @@ class UserAnswersController < ApplicationController
     if @next_question
       redirect_to quiz_session_question_path(@quiz_session, @next_question)
     else
-      redirect_to
+      redirect_to questions_result_path
     end
   end
 
