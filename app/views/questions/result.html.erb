@@ -1,26 +1,75 @@
-<h1>Questions#result</h1>
-<p>Find me in app/views/questions/result.html.erb</p>
 
+<!-- http://localhost:3000/questions/result -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="question-container container">
   <div class="header">
-    <h5>@category.name > @sub_category.name</h5>
+   <h5>Electronics > Headphones</h5>
+ </div>
+ <div class = yay_bar>
+  <p><b>Yay! Your perfect match</b></p>
+</div>
+</div>
+
+<div class="result-wrapper">
+  <div class="card-result radius shadowDepth1">
+    <div class="card__image border-tlr-radius">
+      <img src="/assets/headphones.jpg" alt="image" class="border-tlr-radius">
+    </div>
+    <div class="card__content card__padding">
+      <div class="card__meta">
+        <a href="#" style="font-weight: bold;">EUR 34,61</a>
+        <time>Amazon</time>
+      </div>
+      <article class="card__article">
+        <h2><a href="#">Soundmagic E50</a></h2>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+
+        <p>Extremely satisfied with these "mid priced" ear buds. For the price you can't beat the sound quality.</p>
+      </article>
+      <article class="card__article">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+
+        <p>The chord is excellent. Quiet and doesn't tangle easily.</p>
+      </article>
+
+      <a href="https://www.amazon.com/SoundMAGIC-E50-Ear-Isolating-Earphones/dp/B00UVASGIM/ref=sr_1_1?ie=UTF8&qid=1527847691&sr=8-1&keywords=soundmagic+e50" class="btn btn-default buy-now" role="button">Buy now</a>
+    </div>
   </div>
-  <div class = question>
-    <p>Yay! your perfect match </p>
+
+
+  <div class="sec_th_result">
+   <img class="small-images" src="/assets/second_headphones.jpg" alt="im" >
+   <!--    <h5>@category.name > @sub_category.name</h5> -->
+   <div class="product-description">
+  <h5><p>RHA S500u</p></h5>
+    <p>Amazon </p>
+    <p> <b>EUR 90</b></p>
+    </div>
+    <a href="https://www.amazon.com/SoundMAGIC-E50-Ear-Isolating-Earphones/dp/B00UVASGIM/ref=sr_1_1?ie=UTF8&qid=1527847691&sr=8-1&keywords=soundmagic+e50" class="btn btn-default buy-now" role="button">Buy now</a>
   </div>
-  <div class="row-item col-xs-12">
-    <p>This will be the main result</p>
-    <button type="submit" class="btn-link text-danger">Buy now</button>
+  <div class="sec_th_result">
+   <img class="small-images" src="/assets/third_headphones.jpg" alt="im">
+   <!--    <h5>@category.name > @sub_category.name</h5> -->
+   <div class="product-description"><h5><p>Oppo PM-3</p></h5>
+    <p>Amazon </p>
+    <p><b>EUR 210</b></p>
   </div>
-  <div class="row-item col-xs-12">
-    <button type="submit" class="btn-link text-danger">Buy now</button>
-    <p>Second chioce</p>
-  </div>
-  <div class="row-item col-xs-12" >
-    <button type="submit" class="btn-link text-danger">Buy now</button>
-    <p>Third choice</p>
+    <a href="https://www.amazon.com/SoundMAGIC-E50-Ear-Isolating-Earphones/dp/B00UVASGIM/ref=sr_1_1?ie=UTF8&qid=1527847691&sr=8-1&keywords=soundmagic+e50" class="btn btn-default buy-now" role="button">Buy now</a>
   </div>
 </div>
+
+
+
+
 
 
