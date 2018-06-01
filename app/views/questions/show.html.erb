@@ -1,7 +1,7 @@
-
 <%= simple_form_for [@quiz_session, @user_answer] do |f| %>
   <%= f.association :answer, collection: @question.answers, label_method: :content, value_method: :id, label: @question.content %>
   <%= f.submit %>
 <% end %>
+
 
 
