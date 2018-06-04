@@ -4,14 +4,13 @@
   // align-items: center;
   justify-content: space-around;
   height: 70px;
-  padding: 5px;
   color: rgba(0,0,0,0.3);
   position: fixed;
   width: 100%;
   bottom: 0;
 }
 .footer-links {
-  background: #C0C0C0;
+  background: #FFFFFF;
   flex: 1;
   display: flex;
   align-items: center;
@@ -22,13 +21,13 @@
 
 .footer-links a {
   color: black;
-  opacity: 0.55;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
 }
 .footer-links a:hover {
   opacity: 1;
+  color: #055A4F;
 }
 .footer .fa-heart {
   color: black;
@@ -45,3 +44,4 @@
 .fa-heart {
     font-size: 34px;
 }
+
