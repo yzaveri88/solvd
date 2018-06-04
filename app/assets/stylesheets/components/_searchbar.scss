@@ -1,15 +1,17 @@
 .searchbar {
-  background: $light-gray;
+  background: #055A4F;
   display: flex;
   height: 70px;
-  padding: 5px;
+  padding: 15px;
   color: rgba(0,0,0,0.3);
   width: 100%;
   top: 0;
 }
 
-::placeholder {
-   color: #ffffff5e;
+
+::placeholder { /* Most modern browsers support this now. */
+   color: #111111;
+
    text-transform: uppercase;
    letter-spacing: 2px;
    font-size: 12px;
@@ -31,7 +33,7 @@
 }
 
 .searchterm {
-  background: #C0C0C0;
+  background: #f4f4f4;
   flex: 1;
   display: flex;
   align-items: center;
