@@ -17,7 +17,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @sub_categories = SubCategory.where(params[:category_id])
-    #@sub_category = SubCategory.find(params[:id])
+    # @sub_category = SubCategory.find(params[:id])
   end
 end
 

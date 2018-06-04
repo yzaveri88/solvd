@@ -1,5 +1,12 @@
 class SubCategoriesController < ApplicationController
-  def show
 
-  end
+#  include AlgoliaSearch
+#  algoliasearch do
+# end
+
+
+def show
+
+end
+
 end

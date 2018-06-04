@@ -6,15 +6,16 @@ class QuestionsController < ApplicationController
       @quiz = @sub_category.quiz
     end
 
-
     # Default is quiz 1, to be removed
     # @quiz ||= Quiz.first
-
 
     @quiz_session = QuizSession.create(quiz: @quiz, user: current_user)
     @questions = @quiz.questions
 
-    redirect_to quiz_quiz_session_question_path(@quiz, @quiz_session, @questions.first)
+
+    redirect_to quiz_session_question_path(@quiz_session, @questions.first)
+
+
   end
 
   def show
@@ -25,7 +26,7 @@ class QuestionsController < ApplicationController
     base = @quiz.questions.count || 5
     # num_answers = current_user.user_answers.where(quiz_session: @quiz_session).count + 1
     # @progress = num_answers.fdiv(base)
-    @progress = 1.0
+    # @progress = 1.0
 
 
     #questions for each page
@@ -48,7 +49,8 @@ class QuestionsController < ApplicationController
   end
 
 
-  def result
-
+  def beforeresult
+    @hide_footer = true
   end
+
 end
