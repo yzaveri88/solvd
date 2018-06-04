@@ -1,10 +1,35 @@
-
 <div class="container">
+  <!-- Need to be dynamic -->
   <h3>Electronics > Headphones</h3>
+
+
 <%= simple_form_for [@quiz_session, @user_answer] do |f| %>
-  <%= f.association :answer, collection: @question.answers, label_method: :content, value_method: :id, label: @question.content, as: :radio_buttons %>
+  <%= f.association :answer, collection: @question.answers, label_method: :content, value_method: :id, label: @question.content, as: :radio_buttons, :item_wrapper_class => 'btn btn-primary btn-lg btn-block'  %>
+  <%#=  f.button :submit, "Custom Button Text", class: "btn btn-primary btn-lg btn-block" %>
   <%= f.submit 'Submit' %>
 <% end %>
 </div>
 
 
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <div class="form-post">
+        <!-- Need to be dynamic -->
+        <h1>Electronics > Headphones</h1>
+          <%= simple_form_for [@quiz_session, @user_answer] do |f| %>
+            <div class="row">
+              <div class="col-xs-12 category-choices">
+                <%= f.association :answer, collection: @question.answers, label_method: :content, value_method: :id, label: @question.content, as: :check_boxes %>
+              </div>
+              <%#=  f.button :submit, "Custom Button Text", class: "btn btn-primary btn-lg btn-block" %>
+              <div class="col-xs-12 btn">
+                <%= f.submit 'Submit' %>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>

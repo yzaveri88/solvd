@@ -21,7 +21,11 @@
           <i class="far fa-compass"></i>
           <% end %>
           <a href="#"><i class="fas fa-heart"></i></a>
-          <a href="<% link_to edit_user_registration_path %>"><i class="fas fa-user"></i></a>
+
+          <%= link_to users_edit_path do %>
+          <i class="fas fa-user"></i>
+          <% end %>
+
         </div>
       </div>
     <% end %>
