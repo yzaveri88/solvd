@@ -6,4 +6,5 @@ import $ from 'jquery';
 
 // animate()
 
-$('.img-responsive').fadeIn(200).delay(200).fadeOut(2000);
+
+$('.img-responsive').fadeOut(10).delay(300).fadeIn(2000);
