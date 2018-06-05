@@ -1,11 +1,25 @@
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+
+<div class="load_page_img">
+  <%= link_to image_tag("solvd.png", class: "img-responsive") %>
+</div>
+
+<%= javascript_pack_tag 'animate' %>
+
 <script>
   function Redirect()
   {
-      window.location.href = window.location.origin + "/categories";
-    }
-    setTimeout('Redirect()', 3000);
+    window.location.href = window.location.origin + "/categories";
+  }
+  setTimeout('Redirect()', 2500);
 </script>
-</div>
+
+
+
+
+
 
 <!-- <script>
 
@@ -17,4 +31,5 @@
   // window.location.href = window.location.origin + "/categories"
 
 </script> -->
-<%#= link_to image_tag("solvd.png", class: "img-responsive") %>
+
+

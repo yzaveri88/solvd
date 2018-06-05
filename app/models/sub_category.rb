@@ -4,4 +4,11 @@ class SubCategory < ApplicationRecord
   has_many :products, dependent: :destroy
   has_one :quiz, required: false, dependent: :destroy
 
+  include AlgoliaSearch
+
+  algoliasearch do
+    attribute :name
+  end
+
+
 end

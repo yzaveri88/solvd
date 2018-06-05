@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'questions/show'
   get 'questions/result'
   get 'questions/search'
+  get 'questions/beforeresult', as: 'beforeresult'
 
   devise_for :users
   root to: 'pages#home'

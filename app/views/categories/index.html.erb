@@ -1,15 +1,16 @@
-
-
+<!-- <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+ -->
 <div class="searchbar">
   <div class="searchterm">
     <div class="search-block">
-    <i class="fas fa-search"> </i>
-    <%= form_tag  questions_search_path, method: :get do %>
-    <%= text_field_tag :query, params[:query], placeholder: "Search for products", class: "header-form" %>
+      <i class="fas fa-search"> </i>
+      <%= form_tag  questions_search_path, method: :get, class: "aa-input-container", id: "aa-input-container" do %>
+      <%= text_field_tag :query, params[:query], placeholder: "Which product do you need?", class: "header-form", id: "query-input", class: "aa-input-search" %>
     <% end %>
     </div>
   </div>
 </div>
+
 
 <h4>Explore Categories</h4>
 <div class="carousel">
@@ -47,6 +48,7 @@
   </div>
 </div>
 
-
+<%= javascript_include_tag 'https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js' %>
+<%= javascript_pack_tag 'autocomplete' %>
 
 

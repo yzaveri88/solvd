@@ -5,6 +5,7 @@
   <%= f.association :answer, collection: @question.answers, label_method: :content, value_method: :id, label: @question.content, as: :radio_buttons %>
   <%= f.submit 'Submit' %>
 <% end %>
+
 </div>
 
 
