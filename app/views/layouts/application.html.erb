@@ -10,6 +10,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body class="<%= params[:controller]%> <%= params[:action] %>">
+    <%= favicon_link_tag asset_path('icon.png'), :rel => 'icon', :type =>  'image/png' %>
     <%#= render 'shared/navbar' %>
     <%#= render 'shared/flashes' %>
     <%= yield %>
@@ -25,7 +26,7 @@
           <%= link_to users_edit_path do %>
           <i class="fas fa-user"></i>
           <% end %>
-        
+
         </div>
       </div>
     <% end %>
