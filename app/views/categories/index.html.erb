@@ -5,7 +5,7 @@
     <div class="search-block">
       <i class="fas fa-search"> </i>
       <%= form_tag  questions_search_path, method: :get, class: "aa-input-container", id: "aa-input-container" do %>
-      <%= text_field_tag :query, params[:query], placeholder: "Which product do you need?", class: "header-form", id: "query-input", class: "aa-input-search" %>
+      <%= text_field_tag :query, params[:query], placeholder: "Which product do you need?", class: "header-for", id: "query-input", class: "aa-input-search" %>
     <% end %>
     </div>
   </div>
@@ -33,16 +33,16 @@
 
 <h5>Recommended Electronics</h5>
   <div id="carousel-2" class="carousel">
-   <% @categories.each do |category| %>
+   <% @sub_categories.each do |sub_category| %>
      <div class="carousel-item">
       <div class="card">
         <div class="card__image">
-          <%= link_to category_path(category) do %>
-          <%= cl_image_tag category.photo, height: 250, width:250, crop: :fill %>
+          <%= link_to quiz_quiz_sessions_path(sub_category.quiz), method: :post do %>
+          <%= cl_image_tag sub_category.photo, height: 250, width:250, crop: :fill %>
           <% end %>
         </div>
         <div class="card__info">
-          <h2 class="card__title"><%= category.name %></h2>
+          <h2 class="card__title"><%= sub_category.name %></h2>
         </div>
       </div>
     </div>

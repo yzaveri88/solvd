@@ -17,23 +17,27 @@
 
 <div class="container">
   <h4>Recommended <%= @category.name %></h4>
-  <div class="no-gutter">
+  <div class="no-gutter categories-container">
     <% @sub_categories.each do |sub_category| %>
       <% if sub_category.quiz %>
-        <div class="col-xs-6 col-sm-3">
-          <div class="card-sub-category">
-            <div class="card-sub-category-image">
-              <%= link_to quiz_quiz_sessions_path(sub_category.quiz), method: :post do %>
-                <%= cl_image_tag sub_category.photo, height: 150, width:150, crop: :fill %>
-              <% end %>
-            </div>
-            <div class="card-sub-category-title">
-              <%= sub_category.name %>
+
+         <div class="carousel-item">
+            <div class="card">
+              <div class="card__image">
+                <%= link_to quiz_quiz_sessions_path(sub_category.quiz), method: :post, class: "card-image-container" do %>
+                <%= cl_image_tag sub_category.photo, crop: :fill%>
+                <% end %>
+              </div>
+              <div class="card__info">
+                <h2 class="card__title"><%= sub_category.name %></h2>
+              </div>
             </div>
           </div>
-        </div>
+
       <% end %>
     <% end %>
   </div>
 </div>
 </div>
+
+
