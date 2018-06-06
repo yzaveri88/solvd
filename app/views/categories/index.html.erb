@@ -1,4 +1,4 @@
-<div class="searchbar">
+<div class="navbar-fixed-top searchbar">
   <div class="searchterm">
     <div class="search-block">
     <i class="fas fa-search"> </i>
@@ -9,43 +9,44 @@
   </div>
 </div>
 
-
-<h4>Explore Categories</h4>
-<div class="carousel">
- <% @categories.each do |category| %>
- <div class="carousel-item">
-  <div class="card">
-    <div class="card__image">
-      <%= link_to category_path(category) do %>
-      <%= cl_image_tag category.photo, height: 250, width:250, crop: :fill %>
-      <% end %>
-    </div>
-    <div class="card__info">
-      <h2 class="card__title"><%= category.name %></h2>
-    </div>
-  </div>
-</div>
-<% end %>
-</div>
-<h4>Recommended Electronics</h4>
-
-<div class="container">
-  <div class="no-gutter">
-    <% @sub_categories.each do |sub_category| %>
-      <div class="col-xs-6 col-sm-3">
-        <div class="card-sub-category">
-          <div class="card-sub-category-image">
-          <%= cl_image_tag sub_category.photo, height: 150, width:150, crop: :fill %>
-          </div>
-          <div class="card-sub-category-title">
-            <%= sub_category.name %>
-          </div>
+<div class="container-with-search">
+<h4>Hi, Yash. Which category do you want to explore?</h4>
+  <div id="carousel-1" class="carousel">
+   <% @categories.each do |category| %>
+     <div class="carousel-item">
+      <div class="card">
+        <div class="card__image">
+          <%= link_to category_path(category) do %>
+          <%= cl_image_tag category.photo, height: 250, width:250, crop: :fill %>
+          <% end %>
+        </div>
+        <div class="card__info">
+          <h2 class="card__title"><%= category.name %></h2>
         </div>
       </div>
-      <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
 
+
+<h5>Recommended Electronics</h5>
+  <div id="carousel-2" class="carousel">
+   <% @categories.each do |category| %>
+     <div class="carousel-item">
+      <div class="card">
+        <div class="card__image">
+          <%= link_to category_path(category) do %>
+          <%= cl_image_tag category.photo, height: 250, width:250, crop: :fill %>
+          <% end %>
+        </div>
+        <div class="card__info">
+          <h2 class="card__title"><%= category.name %></h2>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+</div>
 
 
 
