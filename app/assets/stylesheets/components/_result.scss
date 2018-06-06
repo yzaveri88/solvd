@@ -2,19 +2,23 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:700,400';
 
 .yay_bar {
-  background: #C0C0C0;
+  background: $brand-primary;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 5px;
-  height: 50px;
+  height: 80px;
   margin-bottom: 5px;
 
-
-}
   p {
-    margin: 1px 0px 0px;
+  color: white;
+  }
+}
+
+
+p {
+  margin: 1px 0px 0px;
 }
 *,
 *:after,
@@ -27,8 +31,9 @@
 /**
  * Basics Styles
  */
-html.questions.result {
+ html.questions.result {
   font-size: 62.5%;
+  background-color: #FAFAFA;
 }
 body.questions.result {
   background-color: #eee;
@@ -37,15 +42,16 @@ body.questions.result {
   font-size: 1.6em;
   line-height: 1.6;
   color: #666;
+  background-color: #FAFAFA;
 }
 
 a.questions.result {
   text-decoration: none;
   color: #3498db;
 }
-  a:hover {
-    color: #2980b9;
-  }
+a:hover {
+  color: #2980b9;
+}
 
 h2.questions.result {
   line-height: 1.2;
@@ -54,9 +60,10 @@ h2.questions.result {
 
 .result-wrapper {
   max-width: 400px;
-  margin: 180px auto;
+  margin: 140px auto;
   padding-left: 5px;
   padding-right: 5px;
+
 }
 
 /**
@@ -64,28 +71,28 @@ h2.questions.result {
  */
 
 
-.text-center { text-align: center; }
+ .text-center { text-align: center; }
 
-.radius { border-radius: 2px; }
+ .radius { border-radius: 2px; }
 
-.padding-tb { padding-top: 1.6rem; padding-bottom: 1.6rem;}
+ .padding-tb { padding-top: 1.6rem; padding-bottom: 1.6rem;}
 
-.shadowDepth0 { box-shadow: 0 1px 3px rgba(0,0,0, 0.12); }
+ .shadowDepth0 { box-shadow: 0 1px 3px rgba(0,0,0, 0.12); }
 
-.shadowDepth1 {
+ .shadowDepth1 {
    box-shadow:
-      0 1px 3px rgba(0,0,0, 0.12),
-      0 1px 2px rgba(0,0,0, 0.24);
-}
+   0 1px 3px rgba(0,0,0, 0.12),
+   0 1px 2px rgba(0,0,0, 0.24);
+ }
 
 
 /**
  * Card Styles
  */
 
-.card-result  {
+ .card-result  {
   background-color: #fff;
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.1rem;
   position: relative;
   z-index: 1;
   margin-top: -45px;
@@ -99,13 +106,13 @@ h2.questions.result {
   height: 200px;
   background-color: #eee;
 }
-  .card__image img {
-    width: 100%;
-    max-width: 100%;
-    display: block;
+.card__image img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
 
 
-  }
+}
 
 
 /* card meta */
@@ -124,17 +131,17 @@ h2.questions.result {
 
 
 .card__article h1, .h1, h2, .h2, h3, .h3 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-  .card__article a:hover {
-    color: #2980b9;
-  }
+.card__article a:hover {
+  color: #2980b9;
+}
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 /* card action */
 .card__action {
@@ -145,36 +152,41 @@ a {
 }
 
 .checked {
-    color: orange;
+  color: orange;
 }
 
 .buy-now {
   position: absolute;
-  right: 8px;
-  bottom: 135px;
+  right: 15px;
+  bottom: 191px;
   background-color: $light-gray;
-  z-index: 100;
+  // z-index: 100;
   border-radius: 2px;
 }
 
 
+.btn:hover {
+  color: white;
+background-color: $brand-primary;
+}
+
 
 .sec_th_result {
-  background: #E8E8E8;
+  background: white;
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 10px;
-  height: 75px;
+  height: 100px;
   position: relative;
 
-    .buy-now {
+  .buy-now {
     position: absolute;
-    right: 5px;
-    bottom: 15px;
+    right: 15px;
+    bottom: 30px;
     background-color: $light-gray;
-    z-index: 100;
+    // z-index: 100;
     border-radius: 2px;
   }
 
@@ -182,15 +194,15 @@ a {
 
 
 img.small-images {
-  height: 50px;
+  height: 60px;
   position: absolute;
-  left: 6px;
+  left: 10px;
 }
 
-.product-description h5 {
-  font-size: 14px;
-  right: 10px;
-  padding-right: 10px;
+.product-description {
+  // font-size: 14px;
+  // right: 10px;
+  // padding-right: 10px;
 }
 
 
