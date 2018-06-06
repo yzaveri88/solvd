@@ -28,13 +28,21 @@ p {
   box-sizing: border-box;
 }
 
+
+.btn:hover {
+  color: white;
+background-color: $brand-primary;
+}
+
+
 /**
  * Basics Styles
  */
- html.questions.result {
+html.questions.result {
   font-size: 62.5%;
   background-color: #FAFAFA;
 }
+
 body.questions.result {
   background-color: #eee;
   font-family: Roboto;
@@ -63,7 +71,6 @@ h2.questions.result {
   margin: 140px auto;
   padding-left: 5px;
   padding-right: 5px;
-
 }
 
 /**
@@ -71,26 +78,26 @@ h2.questions.result {
  */
 
 
- .text-center { text-align: center; }
+.text-center { text-align: center; }
 
- .radius { border-radius: 2px; }
+.radius { border-radius: 2px; }
 
- .padding-tb { padding-top: 1.6rem; padding-bottom: 1.6rem;}
+.padding-tb { padding-top: 1.6rem; padding-bottom: 1.6rem;}
 
- .shadowDepth0 { box-shadow: 0 1px 3px rgba(0,0,0, 0.12); }
+.shadowDepth0 { box-shadow: 0 1px 3px rgba(0,0,0, 0.12); }
 
- .shadowDepth1 {
-   box-shadow:
-   0 1px 3px rgba(0,0,0, 0.12),
-   0 1px 2px rgba(0,0,0, 0.24);
- }
+.shadowDepth1 {
+  box-shadow:
+  0 1px 3px rgba(0,0,0, 0.12),
+  0 1px 2px rgba(0,0,0, 0.24);
+}
 
 
 /**
  * Card Styles
  */
 
- .card-result  {
+.card-result  {
   background-color: #fff;
   margin-bottom: 1.1rem;
   position: relative;
@@ -106,12 +113,11 @@ h2.questions.result {
   height: 200px;
   background-color: #eee;
 }
+
 .card__image img {
   width: 100%;
   max-width: 100%;
   display: block;
-
-
 }
 
 
@@ -120,7 +126,6 @@ h2.questions.result {
   font-size: 1.5rem;
   color: #bbb;
   margin-left: 0.8rem;
-
 }
 
 /* card article */
@@ -164,13 +169,6 @@ a {
   border-radius: 2px;
 }
 
-
-.btn:hover {
-  color: white;
-background-color: $brand-primary;
-}
-
-
 .sec_th_result {
   background: white;
   flex: 1;
@@ -190,8 +188,12 @@ background-color: $brand-primary;
     border-radius: 2px;
   }
 
-}
+  .btn:hover {
+    color: white;
+  background-color: $brand-primary;
+  }
 
+}
 
 img.small-images {
   height: 60px;
