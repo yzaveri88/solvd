@@ -16,6 +16,10 @@
 
 SubCategory.destroy_all
 Category.destroy_all
+UserAnswer.destroy_all
+Answer.destroy_all
+Question.destroy_all
+Quiz.destroy_all
 
 url = "https://res.cloudinary.com/dzcerxkyh/image/upload/v1528271221/ftvrsf97a0dyezcnvrhz.png"
 category = Category.new(name: 'Electronics')

@@ -3,6 +3,8 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
+    "algoliasearch": "^3.27.1",
+    "autocomplete.js": "^0.30.0",
     "bootstrap": "3",
     "flickity": "^2.1.1",
     "jquery": "^3.3.1"
