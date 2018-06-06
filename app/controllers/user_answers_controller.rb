@@ -1,6 +1,7 @@
 class UserAnswersController < ApplicationController
   def create
-    @user_answer = UserAnswer.new(user_answer_params)
+    @user_answer = UserAnswer.new()
+    @user_answer.answer_id = params[:user_answer][:answer_id][0].to_i
     @quiz_session = QuizSession.find(params[:quiz_session_id])
     @user_answer.quiz_session = @quiz_session
     @user_answer.save
