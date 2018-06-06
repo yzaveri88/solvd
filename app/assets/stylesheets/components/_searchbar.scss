@@ -1,7 +1,7 @@
 .searchbar {
   background: #055A4F;
   display: flex;
-  height: 70px;
+  height: 95px;
   padding: 15px;
   color: rgba(0,0,0,0.3);
   width: 100%;
@@ -11,10 +11,7 @@
 
 ::placeholder { /* Most modern browsers support this now. */
    color: #111111;
-
-   text-transform: uppercase;
-   letter-spacing: 2px;
-   font-size: 12px;
+   font-size: 14px;
 }
 
 .header-form {
@@ -26,18 +23,24 @@
 .search-block {
   display: flex;
   .fa-search {
-    color: #8d8d8d;
+    color: #2b2b2b;
     font-size: 24px;
     margin-right: 15px;
   }
 }
 
 .searchterm {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   background: #f4f4f4;
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  border-radius: 3px;
+  padding-left: 20px;
+  padding-top: 2px;
 }
 
 
