@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/show'
   get 'users/edit'
   get 'questions/show'
   get 'questions/result'
