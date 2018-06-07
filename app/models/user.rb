@@ -3,6 +3,6 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :user_answers
   has_many :quiz_sessions
+  has_many :user_answers, through: :quiz_sessions
 end

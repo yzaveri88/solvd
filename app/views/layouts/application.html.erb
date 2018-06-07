@@ -18,10 +18,15 @@
       <div class="footer">
         <!-- you still have to include the links to the icons -->
         <div class="footer-links">
+
           <%= link_to categories_path do %>
           <i class="far fa-compass"></i>
           <% end %>
-          <a href="#"><i class="far fa-heart"></i></a>
+
+
+          <%= link_to users_show_path do %>
+          <i class="far fa-heart"></i>
+          <% end %>
 
           <%= link_to users_edit_path do %>
           <i class="far fa-user"></i>

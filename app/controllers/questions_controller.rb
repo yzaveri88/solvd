@@ -18,14 +18,17 @@ class QuestionsController < ApplicationController
     end
   end
 
+
   def show
 
     # progress bar
     @quiz_session = QuizSession.find(params[:quiz_session_id])
     @quiz = @quiz_session.quiz
-    # base = @quiz.questions.count || 5
-    # num_answers = current_user.user_answers.where(quiz_session: @quiz_session).count + 1
-    # @progress = num_answers.fdiv(base)
+
+    base = 5
+    num_answers = current_user.user_answers.where(quiz_session: @quiz_session).count + 1
+    @progress = num_answers.fdiv(base)
+
     # @progress = 1.0
 
 

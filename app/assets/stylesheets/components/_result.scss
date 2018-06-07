@@ -1,6 +1,23 @@
 // @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css';
 @import 'https://fonts.googleapis.com/css?family=Roboto:700,400';
 
+.question-container {
+    background: #FAFAFA;
+    position: absolute;
+    height: 70px;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    top: 0;
+}
+
+.result-wrapper {
+    max-width: 400px;
+    margin: 96px auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 .yay_bar {
   background: $brand-primary;
   flex: 1;
@@ -10,6 +27,8 @@
   margin-bottom: 5px;
   height: 80px;
   margin-bottom: 5px;
+  font-family: varela;
+  font-size: 18px;
 
   p {
   color: white;
@@ -18,7 +37,6 @@
   font-size: 18px;
   }
 }
-
 
 p {
   margin: 1px 0px 0px;
@@ -34,7 +52,7 @@ p {
 
 .btn:hover {
   color: white;
-background-color: $brand-primary;
+  background-color: $brand-primary;
 }
 
 
@@ -47,22 +65,18 @@ html.questions.result {
 }
 
 body.questions.result {
-  background-color: #eee;
-  font-family: Roboto;
-  font-weight: 400;
-  font-size: 1.6em;
-  line-height: 1.6;
-  color: #666;
-  background-color: #FAFAFA;
+  font-family: varela;
+    font-weight: 400;
+    font-size: 1.6em;
+    line-height: 1.6;
+    color: #666;
 }
 
 a.questions.result {
   text-decoration: none;
   color: #3498db;
 }
-a:hover {
-  color: #2980b9;
-}
+
 
 h2.questions.result {
   line-height: 1.2;
@@ -95,7 +109,6 @@ h2.questions.result {
   0 1px 2px rgba(0,0,0, 0.24);
 }
 
-
 /**
  * Card Styles
  */
@@ -108,6 +121,7 @@ h2.questions.result {
   margin-top: -45px;
 }
 
+
 .card__padding {
   padding: 0.6rem;
 }
@@ -115,6 +129,8 @@ h2.questions.result {
 .card__image {
   height: 200px;
   background-color: #eee;
+      overflow: hidden;
+    position: relative;
 }
 
 .card__image img {
@@ -123,6 +139,9 @@ h2.questions.result {
   display: block;
 }
 
+.card__meta p {
+  margin-left: 20px;
+}
 
 /* card meta */
 .card__meta time {
@@ -138,14 +157,19 @@ h2.questions.result {
 }
 
 
+
+
 .card__article h1, .h1, h2, .h2, h3, .h3 {
   margin-top: 10px;
   margin-bottom: 10px;
+  font-family: varela;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-.card__article a:hover {
-  color: #2980b9;
-}
+// .card__article a:hover {
+//   color: #2980b9;
+// }
 
 a {
   color: black;
@@ -164,12 +188,10 @@ a {
 }
 
 .buy-now {
-  position: absolute;
-  right: 15px;
-  bottom: 191px;
-  background-color: $light-gray;
-  // z-index: 100;
+
+  background-color: #88e5af;
   border-radius: 2px;
+  font-size: 18px;
 }
 
 .sec_th_result {
@@ -183,12 +205,12 @@ a {
   position: relative;
 
   .buy-now {
-    position: absolute;
-    right: 15px;
-    bottom: 30px;
-    background-color: $light-gray;
-    // z-index: 100;
-    border-radius: 2px;
+  position: absolute;
+  right: 15px;
+
+  background-color: $light-gray;
+  // z-index: 100;
+  border-radius: 2px;
   }
 
   .btn:hover {

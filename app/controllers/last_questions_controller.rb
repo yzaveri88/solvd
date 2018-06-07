@@ -5,10 +5,14 @@ class LastQuestionsController < ApplicationController
     # find the question that is not yet answered by the user of this quiz session
     @user_answer = UserAnswer.new
 
+    base = 5
+    num_answers = current_user.user_answers.where(quiz_session: @quiz_session).count + 1
+    @progress = num_answers.fdiv(base)
 
     unless @question
       # redirect to result
     end
+
     # show the question
 
   end
