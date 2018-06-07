@@ -17,9 +17,9 @@
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <div class="form-post">
         <!-- Need to be dynamic -->
-          <%= simple_form_for [@quiz_session, @user_answer] do |f| %>
             <div class="row">
               <div class="col-xs-12 category-choices">
+            <%= simple_form_for [@quiz_session, @user_answer] do |f| %>
                 <fieldset class="form-group check_boxes required user_answer_answer">
                   <legend class="question-header"><%= @question.content %></legend>
                     <div class="category-choices">
@@ -28,14 +28,12 @@
                       <label class="category-choice" for='<%= "user_answer_answer_id_#{answer.id}" %>'><%= answer.content %></label>
                     <% end %>
                    </div>
-                </fieldset>
+                  </fieldset>
+                  <%= f.submit 'Next', class: "btn btn-primary btn-lg btn-block" %>
+                <% end %>
               </div>
               <%#=  f.button :submit, "Custom Button Text", class: "btn btn-primary btn-lg btn-block" %>
-              <div class="col-xs-12 btn">
-                <%= f.submit 'Next', class: "btn btn-primary btn-lg btn-block" %>
-              </div>
             </div>
-          <% end %>
       </div>
     </div>
   </div>
