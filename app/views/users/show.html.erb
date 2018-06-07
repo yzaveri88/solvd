@@ -1,0 +1,116 @@
+<div class="container">
+  <h3>Favorites</h3>
+  <h5 class="favorites-title">In progress</h5>
+
+    <div class="row">
+        <div class="col-xs-12">
+        <div class="display-quiz-bar">
+
+          <div class="display-quiz-bar-image">
+          <%= cl_image_tag "if_Headphones_648231_1.png", :width=>88, :height=>90, :alt=>"headphones", :crop=>:fit %>
+          </div>
+          <div class="display-quiz-bar-title">
+            <p><strong>Headphones</strong></p>
+            <p>Continue to get your perfect match >></p>
+          </div>
+            <div class="continue-button">
+            <button type="button" class="btn btn-primary">Continue</button>
+          </div>
+
+        </div>
+      </div>
+</div>
+
+  <h5 class="favorites-title">Previous matches</h5>
+
+  <div class="row">
+      <div class="col-xs-12">
+        <div class="display-quiz-bar">
+
+          <div class="display-quiz-bar-image">
+          <%= cl_image_tag "macbookpro.jpg", :width=>88, :height=>90, :alt=>"macbook_pro", :crop=>:fit %>
+          </div>
+          <div class="display-quiz-bar-title">
+            <p><strong>Apple MacBook Pro 15,4"</strong></p>
+            <p>Cyberport</p>
+            <p>Price: €2.349,00</p>
+          </div>
+          <div class="continue-button">
+            <button type="button" class="btn btn-primary">Continue</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+        <div class="display-quiz-bar">
+
+          <div class="display-quiz-bar-image">
+          <%= cl_image_tag "nespresso.jpg", :width=>90, :height=>90, :alt=>"nespresso", :crop=>:fit %>
+          </div>
+          <div class="display-quiz-bar-title">
+            <p><strong>Nespresso D300 Espresso</strong></p>
+            <p>Amazon</p>
+            <p>Price: €399,99</p>
+          </div>
+          <div class="continue-button">
+            <button type="button" class="btn btn-primary">Continue</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>
+
+<!-- CODE FROM CATEGORIES INDEX PAGE (small cards - AS EXAMPLE)
+    <%# @sub_categories.each do |sub_category| %>
+      <%# if sub_category.quiz %>
+
+              <div class="card__image">
+                <%#= link_to quiz_quiz_sessions_path(sub_category.quiz), method: :post, class: "card-image-container" do %>
+                <%#= cl_image_tag sub_category.photo, crop: :fill%>
+                <%# end %>
+              </div>
+              <div class="card__info">
+                <h2 class="card__title"><%#= sub_category.name %></h2>
+              </div>
+            </div>
+          </div>
+
+      <%# end %>
+    <%# end %>
+-->
+
+
+<!-- DYNAMIC CODE TO DISPLAY UNIFINISHED QUIZZES - JUST IF THE USER HAS ANY
+<div class="row">
+<div class="col-xs-12">
+<!--if there is an unfinished quiz then -->
+<%# if @user_answer.quiz_session %>
+<!-- For the subcategory array - for each subcategory -->
+  <%# @sub_categories.each do |sub_category| %>
+<!--display foto
+  <div class="display-quiz-bar-image">
+    <%#= cl_image_tag sub_category.photo, crop: :fill%>
+  </div>
+<!--display category name
+  <div class="display-quiz-bar-title">
+    <p><strong><%#= sub_category.name %></strong></p>
+  </div>
+<!--display continue button
+ <div class="continue-button">
+    <button type="button" class="btn btn-primary">Continue <%#= link_to quiz_quiz_sessions_path(sub_category.quiz) %></button>
+  </div>
+  <%# end  %>
+  <%# else %>
+    <!--else display none
+    <!--Same layout + 'no unfinished quizzes'
+  <%# end %>
+</div>
+</div>
+-->
