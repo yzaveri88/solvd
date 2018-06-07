@@ -1,28 +1,30 @@
 
 <div class="container">
+
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
       <div class="form-post">
+        <progress value="<%= @progress %>"></progress>
         <!-- Need to be dynamic -->
-          <%= simple_form_for [@quiz_session, @user_answer] do |f| %>
-            <div class="row">
-              <div class="col-xs-12 category-choices">
-                <fieldset class="form-group check_boxes required user_answer_answer">
-                  <legend class="question-header"><%= @question.content %></legend>
-                    <div class="category-choices">
-                    <% @question.answers.each do |answer| %>
-                      <input class="hidden" value="<%= answer.id %>" name="user_answer[answer_id][]" id='<%= "user_answer_answer_id_#{answer.id}" %>' type="radio">
-                      <label class="category-choice" for='<%= "user_answer_answer_id_#{answer.id}" %>'><%= answer.content %></label>
-                    <% end %>
-                   </div>
-                </fieldset>
+        <%= simple_form_for [@quiz_session, @user_answer] do |f| %>
+        <div class="row">
+          <div class="col-xs-12 category-choices">
+            <fieldset class="form-group check_boxes required user_answer_answer">
+              <legend class="question-header"><%= @question.content %></legend>
+              <div class="category-choices">
+                <% @question.answers.each do |answer| %>
+                <input class="hidden" value="<%= answer.id %>" name="user_answer[answer_id][]" id='<%= "user_answer_answer_id_#{answer.id}" %>' type="radio">
+                <label class="category-choice" for='<%= "user_answer_answer_id_#{answer.id}" %>'><%= answer.content %></label>
+                <% end %>
               </div>
-              <%#=  f.button :submit, "Custom Button Text", class: "btn btn-primary btn-lg btn-block" %>
-              <div class="col-xs-12 btn">
-                <%= f.submit 'Next', class: "btn btn-primary btn-lg btn-block" %>
-              </div>
-            </div>
-          <% end %>
+            </fieldset>
+          </div>
+          <%#=  f.button :submit, "Custom Button Text", class: "btn btn-primary btn-lg btn-block" %>
+          <div class="col-xs-12 btn">
+            <%= f.submit 'Next', class: "btn btn-primary btn-lg btn-block" %>
+          </div>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
