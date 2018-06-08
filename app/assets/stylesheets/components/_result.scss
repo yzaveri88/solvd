@@ -12,7 +12,7 @@
 }
 
 .result-wrapper {
-  min-height: 100vh;
+  min-height: 120vh;
   max-width: 400px;
   margin: 10px auto;
   padding: 30px 5px;
@@ -133,7 +133,7 @@ h2.questions.result {
  padding-top: 24px;
 }
 
-.card__image {
+.card__image1 {
   height: 45vh;
   background-color: #eee;
   overflow: hidden;
@@ -231,10 +231,12 @@ a {
   .buy-now {
     position: absolute;
     right: 15px;
-
-    background-color: $light-gray;
+    font-size: 14px;
+    background-color: #428c7d;
+    color: white;
+    margin-right: 11px;
   // z-index: 100;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .btn:hover {
