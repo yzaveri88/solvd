@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
-  get 'users/show'
-  get 'users/edit'
+  devise_for :users
+
   get 'questions/show'
   get 'questions/result'
   get 'questions/search'
   get 'questions/beforeresult', as: 'beforeresult'
 
-  devise_for :users
+
+  get 'profile/show', to: "users#show"
+  get 'profile/edit', to: "users#edit"
+
   root to: 'pages#home'
   resources :pages
   resources :categories, only: [:index, :show]
