@@ -12,10 +12,10 @@
 }
 
 .result-wrapper {
+  min-height: 100vh;
   max-width: 400px;
-  margin: 96px auto;
-  padding-left: 5px;
-  padding-right: 5px;
+  margin: 10px auto;
+  padding: 30px 5px;
 }
 
 .yay_bar {
@@ -126,6 +126,7 @@ h2.questions.result {
 }
 
 
+
 .card__padding {
  padding: 1.6rem;
  padding-bottom: 39px;
@@ -133,16 +134,23 @@ h2.questions.result {
 }
 
 .card__image {
-  height: 220px;
+  height: 45vh;
   background-color: #eee;
   overflow: hidden;
   position: relative;
+  background: url('http://res.cloudinary.com/dzcerxkyh/image/upload/v1528453493/first_headphones.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 75px;
+  background-attachment: fixed;
 }
 
-.card__image img {
-  width: 100%;
-  max-width: 100%;
-  display: block;
+.img-container {
+  background-color: white;
+}
+
+.card__image {
+
 }
 
 .card__meta p {
@@ -243,14 +251,10 @@ img.small-images {
 }
 
 .product-description {
-  // font-size: 14px;
-  // right: 10px;
-  // padding-right: 10px;
 }
 
 .main-product-description {
-font-family: varela;
-font-size: 18px;
-
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
