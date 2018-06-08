@@ -54,3 +54,29 @@ flkty2.on( 'scroll', function () {
   } );
 } );
 
+let elem3 = document.getElementById('carousel-3');
+let flkty3 = new Flickity( elem3, {
+  // options
+  imagesLoaded: true,
+  cellAlign: 'center',
+  contain: true,
+  pageDots: false,
+  freeScroll: true,
+  wrapAround: true,
+  resize: false,
+  setGallerySize: false
+});
+
+var imgs3 = document.querySelectorAll("#carousel-3 .carousel-item .card .card__image img");
+var docStyle3 = document.documentElement.style;
+var transformProp3 = typeof docStyle3.transform == 'string' ? 'transform' : 'WebkitTransform';
+var info3 = document.querySelector(".info");
+
+flkty3.on( 'scroll', function () {
+  flkty3.slides.forEach( function (slide, i) {
+    var img3 = imgs3[i];
+    var x3 = ( slide.target + flkty3.x ) * -1/3;
+
+    img3.style[transformProp3] = 'translateX(' + x3 + 'px) scale(1.3)';
+  } );
+} );
