@@ -2,20 +2,20 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto:700,400';
 
 .question-container {
-    background: #FAFAFA;
-    position: absolute;
-    height: 70px;
-    padding: 5px;
-    color: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    top: 0;
+  background: #FAFAFA;
+  position: absolute;
+  height: 70px;
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  top: 0;
 }
 
 .result-wrapper {
-    max-width: 400px;
-    margin: 96px auto;
-    padding-left: 5px;
-    padding-right: 5px;
+  max-width: 400px;
+  margin: 96px auto;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .yay_bar {
@@ -31,10 +31,10 @@
   font-size: 18px;
 
   p {
-  color: white;
-  font-family: varela;
-  font-weight: bold;
-  font-size: 18px;
+    color: white;
+    font-family: varela;
+    font-weight: bold;
+    font-size: 18px;
   }
 }
 
@@ -59,17 +59,17 @@ p {
 /**
  * Basics Styles
  */
-html.questions.result {
+ html.questions.result {
   font-size: 62.5%;
   background-color: #FAFAFA;
 }
 
 body.questions.result {
   font-family: varela;
-    font-weight: 400;
-    font-size: 1.6em;
-    line-height: 1.6;
-    color: #666;
+  font-weight: 400;
+  font-size: 1.6em;
+  line-height: 1.6;
+  color: #666;
 }
 
 a.questions.result {
@@ -85,7 +85,6 @@ h2.questions.result {
 
 .result-wrapper {
   max-width: 400px;
-  margin: 140px auto;
   padding-left: 5px;
   padding-right: 5px;
 }
@@ -93,7 +92,12 @@ h2.questions.result {
 /**
  * Helpers
  */
+ .card__padding {
+  padding: 1.6rem;
+  padding-bottom: 39px;
+  padding-top: 24px;
 
+}
 
 .text-center { text-align: center; }
 
@@ -113,7 +117,7 @@ h2.questions.result {
  * Card Styles
  */
 
-.card-result  {
+ .card-result  {
   background-color: #fff;
   margin-bottom: 1.1rem;
   position: relative;
@@ -123,14 +127,16 @@ h2.questions.result {
 
 
 .card__padding {
-  padding: 0.6rem;
+ padding: 1.6rem;
+ padding-bottom: 39px;
+ padding-top: 24px;
 }
 
 .card__image {
   height: 200px;
   background-color: #eee;
-      overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
 .card__image img {
@@ -151,9 +157,20 @@ h2.questions.result {
 }
 
 /* card article */
-.card__article a {
-  text-decoration: none;
-  color: #444;
+.card__article {
+
+  a {
+    border-radius: 5px;
+    padding: 14px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+  }
+  h2 {
+    color: black;
+  }
 }
 
 
@@ -188,8 +205,7 @@ a {
 }
 
 .buy-now {
-
-  background-color: #88e5af;
+  background-color: #428c7d;
   border-radius: 2px;
   font-size: 18px;
 }
@@ -205,18 +221,18 @@ a {
   position: relative;
 
   .buy-now {
-  position: absolute;
-  right: 15px;
+    position: absolute;
+    right: 15px;
 
-  background-color: $light-gray;
+    background-color: $light-gray;
   // z-index: 100;
   border-radius: 2px;
-  }
+}
 
-  .btn:hover {
-    color: white;
+.btn:hover {
+  color: white;
   background-color: $brand-primary;
-  }
+}
 
 }
 
