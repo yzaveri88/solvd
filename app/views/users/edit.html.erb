@@ -1,11 +1,14 @@
-<!-- Avatar Picture & First and Lastname -->
-<div class="user_container">
-  <div class="user-profile-picture">
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-large"/>
+<div class="container">
+  <!-- Avatar Picture & First and Lastname -->
+  <div class="user_container">
+    <div class="user-profile-picture">
+      <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="avatar-large"/>
+    </div>
   </div>
+  <!-- Link to Edit email, Change PW  & Log Out-->
+  <%= link_to "Edit Email", edit_user_registration_path, class: "btn btn-primary btn-lg btn-block" %>
+  <%= link_to "Back home", root_path, class: "btn btn-primary btn-lg btn-block" %>
+  <br>
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-danger btn-lg btn-block" %>
+
 </div>
-<!-- Link to Edit email, Change PW  & Log Out-->
-<%= link_to "Edit Email", edit_user_registration_path, class: "btn btn-primary btn-lg btn-block" %>
-<%= link_to "Change Password", edit_user_password_path, class: "btn btn-primary btn-lg btn-block" %>
-<br>
-<%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-lg btn-block" %>
