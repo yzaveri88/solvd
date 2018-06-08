@@ -93,6 +93,37 @@ sub_category_8 = SubCategory.create!(name: 'Gaming', category_id: category.id)
 sub_category_8.remote_photo_url = sub_category_url_8
 sub_category_8.save!
 
+sub_category_url_9 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1528448037/if_clothing-tshirts_383287_1.png"
+sub_category_9 = SubCategory.create!(name: 'Apparel', category: category_3)
+sub_category_9.remote_photo_url = sub_category_url_9
+sub_category_9.save!
+
+sub_category_url_10 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1528448037/if_Snow-2_378834.png"
+sub_category_10 = SubCategory.create!(name: 'Snow', category: category_3)
+sub_category_10.remote_photo_url = sub_category_url_10
+sub_category_10.save!
+
+sub_category_url_11 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1528448037/if_Hiking_592971.png"
+sub_category_11 = SubCategory.create!(name: 'Hiking', category: category_3)
+sub_category_11.remote_photo_url = sub_category_url_11
+sub_category_11.save!
+
+sub_category_url_12 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1528448037/if_sportix_bike_459136.png"
+sub_category_12 = SubCategory.create!(name: 'Cycling', category: category_3)
+sub_category_12.remote_photo_url = sub_category_url_12
+sub_category_12.save!
+
+sub_category_url_13 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1528448037/if_swimming-goggles_329049.png"
+sub_category_13 = SubCategory.create!(name: 'Swimming', category: category_3)
+sub_category_13.remote_photo_url = sub_category_url_13
+sub_category_13.save!
+
+sub_category_url_14 = "http://res.cloudinary.com/dzcerxkyh/image/upload/v1528448037/if_backpack_361968.png"
+sub_category_14 = SubCategory.create!(name: 'Camping', category: category_3)
+sub_category_14.remote_photo_url = sub_category_url_14
+sub_category_14.save!
+
+
 quiz = Quiz.create!(sub_category: sub_category_1)
 quiz2 = Quiz.create!(sub_category: sub_category_2)
 quiz3 = Quiz.create!(sub_category: sub_category_3)

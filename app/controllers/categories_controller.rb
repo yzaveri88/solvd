@@ -3,7 +3,10 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all
-    @sub_categories = SubCategory.where(params[:category_id])
+    @electronics = Category.where(name: "Electronics")
+    @outdoors = Category.where(name: "Outdoors")
+    @electronics_sub_categories = SubCategory.where(category: @electronics)
+    @outdoors_sub_categories = SubCategory.where(category: @outdoors)
   end
 
   def search

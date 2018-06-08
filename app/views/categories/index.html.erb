@@ -29,10 +29,27 @@
   <% end %>
 </div>
 
+<h5>Recommended Outdoors</h5>
+  <div id="carousel-3" class="carousel">
+   <% @outdoors_sub_categories.each do |sub_category| %>
+     <div class="carousel-item">
+      <div class="card">
+        <div class="card__image">
+          <%= link_to '#', method: :post do %>
+          <%= cl_image_tag sub_category.photo, height: 250, width:250, crop: :fill %>
+          <% end %>
+        </div>
+        <div class="card__info">
+          <h2 class="card__title"><%= sub_category.name %></h2>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 <h5>Recommended Electronics</h5>
   <div id="carousel-2" class="carousel">
-   <% @sub_categories.each do |sub_category| %>
+   <% @electronics_sub_categories.each do |sub_category| %>
      <div class="carousel-item">
       <div class="card">
         <div class="card__image">
@@ -47,6 +64,8 @@
     </div>
   <% end %>
 </div>
+
+
 </div>
 
 
